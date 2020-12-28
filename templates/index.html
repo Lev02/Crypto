@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Get cryptocurrency information!
+{% endblock %}
+
+{% block content %}
+
+<h3 class="todo">Enter cryptocurrency</h3>
+
+<div class="box">
+    <form method="POST">
+        {% csrf_token %}
+
+        <p class="result" id="result1"></p>
+        <p class="result" id="result2"></p>
+        <p class="result" id="result3"></p>
+        {{coin_name}}
+
+    <p class="exception">
+        {{exc}}
+        </p>
+    <input type="submit" value="Search!" id="load"/>
+    <div id="newloadblock1"></div>
+    <div id="newloadblock2"></div>
+    </form>
+</div>
+
+{% endblock %}

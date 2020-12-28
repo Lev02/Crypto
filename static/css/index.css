@@ -1,0 +1,345 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+.box input[type = "text"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #FFD325;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type = "text"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+#newloadblock1 {
+    display: none;
+    position: absolute;
+    z-index: 3000;
+    bottom: 50px;
+    left: 139px;
+    border: 2px solid #2ecc71;
+    background-color: #2ecc71;
+    width: 138px;
+    height: 43.25px;
+    border-radius: 24px;
+}
+#newloadblock2 {
+    display: none;
+    position: absolute;
+    z-index: 2500;
+    bottom: 50px;
+    left: 139px;
+    border: 2px solid #2ecc71;
+    background: none;
+    width: 138px;
+    height: 43.25px;
+    border-radius: 24px;
+}
+#load{
+    transition: 0.25s;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 46px;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+}
+#load:hover{
+    background: #2ecc71;
+    font-weight: bold;
+    color: #271723;
+    padding: 14px 44px;
+}
+
+.box:hover{
+    border: 2px solid rgb(0,255,100);
+    background-color: #0F0A18;
+    transition: 3s;
+}
+.box label{
+    color: white;
+}
+.box {
+    transition: 3s;
+    width: 300px;
+    padding: 30px 60px 30px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #191919;
+    text-align: center;
+    border-radius: 60px;
+    border: 2px solid #ffff71;
+    position: relative;
+    z-index: 0;
+}
+
+.date {
+    transition: 1s;
+    background-color: #453A6F;
+    width: 320px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffa1;
+    border: 0.5px solid #3498db;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.date:hover{
+    transition: 1s;
+    border: 0.5px solid #8551FF;
+    color: #ffff71;
+}
+
+.cost {
+    font-size: 20px;
+    color: #ffff71;
+}
+.back {
+    transition: 0.25s;
+    background: none;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #00FF64;
+    border-radius: 20px;
+    color:#CECE5B;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.back:hover {
+    transition: 0.35s;
+    color: #000000;
+    background-color: #00FF64;
+}
+
+.allswitch input {
+    display: block;
+    position: absolute;
+    top: 25px;
+    width: 8%;
+    opacity: 0;
+    height: 8%;
+    left: 20px;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.allswitch {
+    display: block;
+    width: 25px;
+    height: 25px;
+    padding-bottom: 10px;
+    padding-right: 350px;
+}
+
+.allswitch label {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.allswitch label:before {
+    transition: 0.4s;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    content: "";
+    width: 25px;
+    height: 25px;
+    bottom: 197px;
+    left: 24px;
+    border: 3px solid #3A22EC;
+    margin-right: 400px;
+    border-radius: inherit;
+    background: #969696;
+}
+
+.allswitch input:checked ~ label:before {
+    display: block;
+    transition: 0.4s;
+    background: #25d025;
+}
+
+.alert {
+    font-weight: bold;
+    color: #FF0F3B;
+}
+
+.exception {
+    position: absolute;
+    z-index: 10;
+    color: #EC4B50;
+    top: 10px;
+    right: 100px;
+    left: 100px;
+}
+
+.todo {
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+}
+
+
+.result {
+    position: absolute;
+    display: none;
+    width: 250px;
+    right: 78px;
+    z-index: 15;
+    padding: 3px;
+    background-color: #52000A;
+    border: 1px solid #ECE930;
+    color: #FFD325;
+    margin-left: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+#result1 {
+    bottom: 150px;
+}
+#result1:hover {
+    background-color: #610F19;
+}
+#result2 {
+    bottom: 175px;
+}
+#result2:hover {
+    background-color: #610F19;
+}
+#result3 {
+    bottom: 200px;
+    border-radius: 20px 20px 0px 0px;
+}
+#result3:hover {
+    background-color: #610F19;
+}
+.coin {
+    font-size: 20px;
+}
+.coincost{
+    transition: 3s;
+    color: white;
+    width: 475px;
+    padding: 45px;
+    margin: auto;
+    margin-top: 30px;
+    background: #191919;
+    text-align: center;
+    border-radius: 60px;
+    border: 2px solid rgb(0,255,100);
+}
+
+.reload_button{
+    transition: 0.3s;
+    background-color: #0F0A18;
+    display: block;
+    border: 2px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    float: none;
+    color: grey;
+    top: 75px;
+    width: 100px;
+    padding: 15px 5px 15px 5px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.reload_button:hover{
+    transition: 0.3s;
+    color: white;
+}
+
+.coincost:hover{
+    border: 2px solid #ffff71;
+}
+.otherinfo {
+    background-color: #0F0A18;
+    display: block;
+    border: 2px solid yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    float: none;
+    color: white;
+    top: 75px;
+    width: 275px;
+    padding: 15px 5px 5px 5px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+#marketcap {
+    font-size: 19px;
+    color: #ffff71;
+}
+#position {
+    font-size: 20px;
+}
+#change24h {
+    font-size: 20px;
+}
+
+.languages {
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    top: 10px;
+}
+.languageImages {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 10px;
+}
+.languageImage:onclick {
+    width: 75%;
+    height: 75%;
+    transition: 1s;
+    width: 30px;
+    height: 20px;
+}
+#imageRU {
+    margin-left: 10px;
+}
+
+#id_languageEN {
+    width: 35px;
+    height: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#id_languageRU {
+    width: 35px;
+    height: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}

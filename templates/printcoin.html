@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{{ coin }}
+
+{% endblock %}
+
+
+{% block content %}
+    <button class="reload_button" onClick="window.location.reload();">Refresh</button>
+
+    <div class="otherinfo pos">
+        <span id="posJS">Position</span>
+        <p>
+            #<span id="position">{{position}}</span>
+        </p>
+    </div>
+    <div class="otherinfo change">
+        <span id="change24hJS">Change 24h</span>
+        <p >
+            <span id="change24h">{{change24h}}</span>%
+        </p>
+    </div>
+    <div class="otherinfo marketcap" >
+        <span id="marketcapJS">Market cap</span>
+        <p>
+            <span id="marketcap1">{{marketcap}}</span>$
+            </p>
+        </div>
+<div class="coincost">
+    <span class="coin">{{coin_name}}</span> <span id="costs">costs</span> <span class="cost">{{coincost}}</span>$
+</div>
+
+<p class="date">
+     {{date}}
+</p>
+
+<form method="GET">
+    {% csrf_token %}
+    <input type="submit" value="Back to search" class="back"/>
+</form>
+
+
+{% endblock %}

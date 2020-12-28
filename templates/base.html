@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title id="title">{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css\index.css' %}">
+        <link rel="SHORTCUT ICON" href="{% static "images/bitcoin.jpg" %}" type="image/x-icon">
+    </head>
+<body>
+<div class="languages">
+    {{languageEN}}
+    {{languageRU}}
+</div>
+<p></p>
+<div class="languageImages">
+    <img class="languageImage" id="imageEN" src="{% static "images/UKflag.jpg" %}" alt="EN">
+    <img class="languageImage" id="imageRU" src="{% static "images/RUflag.jpg" %}" alt="RU">
+</div>
+            {% block content %}
+
+            {% endblock %}
+<script src="{% static 'javascript\index.js' %}"></script>
+</body>
+
+</html>
