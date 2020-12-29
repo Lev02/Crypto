@@ -4,7 +4,7 @@ from .forms import CoinNameForm, LanguageEnForm, LanguageRuForm
 import datetime
 import urllib
 import re
-
+##
 def get_html(site):
     print('Making request to ' + site)
     try:
@@ -57,7 +57,8 @@ def get_coin(request):
                 price = re.findall('''"price":\d+.?\d*''',html)[-1][8:]
                 print("price: ", price)
 
-                position = re.findall('''Rank \d+''',html)[-1][5:]
+                position = re.findall('''Rank #?\d+''',html)[-1][5:]
+                position.replace("#","")
                 print("position: ", position)
 
                 change24h = re.findall('''"percent_change_24h":-?\d+.?\d*''',html)[-1][21:]
