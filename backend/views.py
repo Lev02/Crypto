@@ -58,7 +58,7 @@ def get_coin(request):
                 print("price: ", price)
 
                 position = re.findall('''Rank #?\d+''',html)[-1][5:]
-                position.replace("#","")
+                position = position.replace("#","")
                 print("position: ", position)
 
                 change24h = re.findall('''"percent_change_24h":-?\d+.?\d*''',html)[-1][21:]
