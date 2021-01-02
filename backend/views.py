@@ -54,7 +54,7 @@ def get_coin(request):
         html = get_html(site_url)
         if html != None:
             if re.search("<h2>Sorry, we couldn&#x27;t find your page</h2>",html) == None:
-                price = re.findall('''"price":\d+.?\d*''',html)[-1][8:]
+                price = re.search('''"USD":{"price":\d+.?\d*''',html)[0][len('''"USD":{"price":'''):]
                 print("price: ", price)
 
                 position = re.findall('''Rank #?\d+''',html)[-1][5:]
